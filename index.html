@@ -17,9 +17,9 @@
       <header>
       <div class="page-heder">      
         <a href="" class="logo"> <span>Web</span>Studio</a>
-        <nav class="nav-heder">
+        <nav class="nav-heder-ul">
         <ul class="nav-heder">
-          <li class="item"><a class="list-nav" href="">Студия</a></li>
+          <li class="item"><a class="list-nav current" href="">Студия</a></li>
           <li class="item"><a class="list-nav"href="./portfolio.html">Портфолио</a></li>
           <li class="item"><a class="list-nav"href="">Контакты</a></li>
         </ul>
@@ -29,21 +29,19 @@
           <a class="list-nav-adress"href="mailto:info@devstudio.com">
             <svg class="contact-icon" aria-hidden="true" width="16" height="12">
               <use href="./image/icons.svg/symbol-defs.svg#icon-letter"></use>
-            </svg>
-            info@devstudio.com</a></li>
+            </svg> info@devstudio.com</a></li>
         <li class="item-adr">
           <a class="list-nav-adress"href="tell:+3800961111111">
               <svg class="contact-icon" aria-hidden="true" width="10" height="16" >
               <use href="./image/icons.svg/symbol-defs.svg#icon-phon"></use>
-            </svg>
-            +38 096 111 11 11</a></li>
+             </svg>+38 096 111 11 11</a></li>
       </ul>
       </div>
     </header>    
     <main>
           <section class="hero">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <button class="button-hero" type="button">Заказать услугу</button>
+          <button class="button-hero" data-modal-open>Заказать услугу</button>
         </section>
       <section class="paragraph"> 
         <div class="container-text"> 
@@ -51,7 +49,7 @@
           <li class="list-text">       
               <div class="icon">             
               <svg class="icon-text">
-              <use  href="./image/icons.svg/symbol-defs.svg#icon-antenna" width="65" height="70">
+              <use  href="./image/icons.svg/symbol-defs.svg#icon-antenna">
               </svg>                             
             </div>        
             <h3 class="section-title">Внимание к деталям</h3>
@@ -63,7 +61,7 @@
           <li class="list-text">
             <div class="icon">
               <svg class="icon-text">
-                  <use href="./image/icons.svg/symbol-defs.svg#icon-clock" width="67" height="70">
+                  <use href="./image/icons.svg/symbol-defs.svg#icon-clock">
               </svg>
             </div>
             <h3 class="section-title">Пунктуальность</h3>
@@ -75,7 +73,7 @@
           <li class="list-text">
             <div class="icon">
               <svg class="icon-text">
-              <use href="./image/icons.svg/symbol-defs.svg#icon-computer" width="70" height="54">
+              <use href="./image/icons.svg/symbol-defs.svg#icon-computer">
               </svg>
             </div>   
             <h3 class="section-title">Планирование</h3>
@@ -87,7 +85,7 @@
           <li class="list-text">
             <div class="icon">
               <svg class="icon-text">
-              <use href="./image/icons.svg/symbol-defs.svg#icon-astronaut" width="55" height="60">
+              <use href="./image/icons.svg/symbol-defs.svg#icon-astronaut">
               </svg>
             </div>   
             <h3 class="section-title">Современные технологии</h3>
@@ -248,7 +246,7 @@
           <li class="employees-people">
             <img src="./image/img6.jpg" alt="Михаил Ермаков" width="270" />
             <div class="igor">
-            <h3 class="name"">Михаил Ермаков</h3>
+            <h3 class="name">Михаил Ермаков</h3>
             <p class="work">UI Designer</p>
             <div class="social"> 
               <ul class="social-studio">
@@ -335,35 +333,16 @@
               </li>
              </ul>
           </div>
-        </section> 
-       <div class="backdrop is-hidden
-       ">
-        <div class="modal">
-          <button class="modal-close">
-            <svg class="close" width="18" height="18">
-              <use href="./image/icons.svg/symbol-defs.svg#icon-close-black-18dp-2-1-1"></use>
-            </svg>
-          </button>
-        </div>
-       </div>
-    </main> 
-  
+        </section>        
+    </main>   
     <footer>
       <div class="container-footer">
       <div class="footer-map">
       <a href=""class="logo-footer"> <span>Web</span>Studio</a>
       <address>
         <ul>
-          <li>
-            <a class="adress-footer-map" href="https://bit.ly/3pXMvUd"
-              target="_blank"
-              rel="noopener noreferrer">г. Киев, пр-т Леси Украинки, 26</a>
-          </li>
-          <li>
-            <a class="adress-footer" href="mailto:info@devstudio.com"
-              >info@devstudio.com</a
-            >
-          </li>
+          <li><a class="adress-footer-map" href="https://bit.ly/3pXMvUd"  target="_blank" rel="noopener noreferrer">г. Киев, пр-т Леси Украинки, 26</a></li>
+          <li><a class="adress-footer" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
           <li><a class="adress-footer" href="tel:+380961111111">+38 096 111 11 11</a></li>
         </ul>
       </address>
@@ -404,6 +383,16 @@
           </div>
           </li> 
       </div>
-    </footer>    
+    </footer> 
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal" >
+          <button type="button" class="modal-close" data-modal-close>
+            <svg class="close-icon">
+              <use href="./image/icons.svg/symbol-defs.svg#icon-close-black-18dp-2-1-1"></use>
+            </svg>
+          </button>
+        </div>
+       </div>
+    <script src="./js/modal.js"></script>   
   </body>
 </html>
